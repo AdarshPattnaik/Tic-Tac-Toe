@@ -34,7 +34,12 @@ let reset = new Audio("resetButton.wav");
 
 // Funtion for deciding turn:
 const changeTurn = () => {
-    return turn === "X" ? "0" : "X";
+    if (!gameover) {
+        return turn === "X" ? "0" : "X";
+    }
+    else {
+        return null;
+    }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
