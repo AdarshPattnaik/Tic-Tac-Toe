@@ -1,0 +1,292 @@
+/* This CSS stylesheet is for the beautification of the webpage */
+
+/* Initiation of the CSS Source Code */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling of the webpage */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Root */
+:root {
+    --dark: rgba(12, 16, 34);
+    --light: rgba(237, 227, 255);
+}
+
+/* HTML Body */
+body {
+    background-color: var(--dark);
+}
+
+body::before {
+    content: " ";
+    background: url('https://cutewallpaper.org/21/3d-blue-wallpaper/3D-Dark-Blue-Bubbles-HD-Wallpaper-in-2019-Dark-blue-.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    z-index: -1;
+}
+
+/* Navigation Bar */
+nav {
+    font-family: 'Anton', sans-serif;
+    /* border: 1px solid red; */
+    background-color: #04002ccc;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    box-shadow: 0px 0px 10px rgb(7, 7, 7);
+    text-shadow: 0px 0px 10px black;
+}
+
+.gameContainer {
+    /* border: 1px solid yellow; */
+    height: 32rem;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 30px 3px rgba(172, 172, 172, 0.699), 0px 0px 15px white inset;
+    display: grid;
+    grid-template-rows: repeat(3, 110px);
+    grid-template-columns: repeat(3, 110px);
+}
+
+.box {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    background-color: rgba(54, 118, 255, 0.582);
+    color: white;
+    text-shadow: 0px 0px 5px white;
+    margin: 1px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.233),
+        0px 0px 10px rgba(255, 255, 255, 0.562) inset;
+}
+
+.box:hover {
+    background: rgba(60, 167, 255, 0.568);
+}
+
+.gameInfo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 50px;
+    padding: 23px;
+    height: 25rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 3px rgba(172, 172, 172, 0.699), 0px 0px 15px white inset;
+}
+
+
+.gameInfo div {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameInfo h1 {
+    font-family: 'Racing Sans One', cursive;
+    text-shadow: 0px 0px 10px black;
+    text-decoration: underline;
+}
+
+.info {
+    font-family: 'Alatsi', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+.gif img {
+    width: 0;
+    height: 0;
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 182));
+    transition: width 1s ease-in-out;
+}
+
+#reset {
+    font-family: 'Secular One', sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    text-shadow: 0px 0px 1px black;
+    margin-top: 1rem;
+    height: 40px;
+    width: 100px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(0, 132, 255);
+    color: white;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255) inset,
+        0px 0px 5px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: rgb(0, 162, 255);
+}
+
+footer {
+    font-family: 'Ramabhadra', sans-serif;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 10px 2px black;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsiveness: */
+@media only screen and (max-width: 840px) {
+    .gameContainer {
+        height: 45rem;
+        flex-direction: column;
+    }
+
+    .container {
+        padding-top: 20px;
+        height: 15rem;
+        width: 15rem;
+        grid-template-rows: repeat(3, 4.2rem);
+        grid-template-columns: repeat(3, 4.2rem);
+    }
+
+    .box{
+        font-size: 2rem;
+    }
+
+    .gameInfo {
+        height: 25rem;
+        width: 25rem;
+        margin: 25px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .gameInfo{
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    nav{
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .gameContainer {
+        height: 42rem;
+    }
+
+    .container {
+        padding-top: 12px;
+        height: 12rem;
+        width: 12rem;
+        grid-template-rows: repeat(3, 3.5rem);
+        grid-template-columns: repeat(3, 3.5rem);
+    }
+
+    .gameInfo {
+        height: 25rem;
+        width: 15rem;
+        margin: 25px;
+        align-items: center;
+    }
+
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+
+    .gameInfo div{
+        margin-top: 12px;
+    }
+
+    .info{
+        font-size: 1.1rem;
+    }
+
+    #reset{
+        height: 30px;
+        width: 70px;
+        font-size: 12px;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .gameInfo {
+        width: 12rem;
+        margin: 25px;
+        align-items: center;
+    }
+
+    .gameInfo h1{
+        font-size: 1.3rem;
+    }
+
+    .info{
+        font-size: 1rem;
+    }
+
+    footer{
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    footer{
+        height: 30px;
+        font-size: 7.8px;
+    }
+}
