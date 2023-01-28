@@ -104,11 +104,15 @@ Array.from(boxes).forEach(element => {
             if (!gameover) {
                 boxtext.innerText = turn;
                 tapSound.play();
-                
-                document.getElementsByClassName("info")[0].innerText = "Turn for Player " + turn;
+                if(turn === "X"){
+                    document.getElementsByClassName("info")[0].innerText = "Turn for Player 0";
+                }
+                else if(turn === "0"){
+                    document.getElementsByClassName("info")[0].innerText = "Turn for Player X";
+                }
+                checkWinner();
             }
             turn = changeTurn();
-            checkWinner();
         }
     });
 });
