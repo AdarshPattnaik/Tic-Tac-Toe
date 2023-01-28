@@ -34,12 +34,7 @@ let reset = new Audio("resetButton.wav");
 
 // Funtion for deciding turn:
 const changeTurn = () => {
-    if (!gameover) {
-        return turn === "X" ? "0" : "X";
-    }
-    else {
-        return null;
-    }
+    return turn === "X" ? "0" : "X";
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,11 +101,11 @@ Array.from(boxes).forEach(element => {
     let boxtext = element.querySelector('.boxtext');
     element.addEventListener('click', () => {
         if (boxtext.innerText === '') {
-            boxtext.innerText = turn;
-            turn = changeTurn();
-            tapSound.play();
-            checkWinner();
             if (!gameover) {
+                boxtext.innerText = turn;
+                turn = changeTurn();
+                tapSound.play();
+                checkWinner();
                 document.getElementsByClassName("info")[0].innerText = "Turn for Player " + turn;
             }
         }
