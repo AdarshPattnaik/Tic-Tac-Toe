@@ -23,12 +23,12 @@ let gameover = false;
 
 // Sound effects:
 // Tapping sound clip:
-let tapSound = new Audio("../Audio/tap.mp3");
+let tapSound = new Audio("tap.mp3");
 // Winning sound clip:
-let winnerSound_01 = new Audio("../Audio/winner.mp3");
-let winnerSound_02 = new Audio("../Audio/Pikachu.mp3");
+let winnerSound_01 = new Audio("winner.mp3");
+let winnerSound_02 = new Audio("Pikachu.mp3");
 // Reset sound clip:
-let reset = new Audio("../Audio/resetButton.wav");
+let reset = new Audio("resetButton.wav");
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
