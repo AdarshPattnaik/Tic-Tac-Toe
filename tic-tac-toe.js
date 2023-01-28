@@ -103,11 +103,11 @@ Array.from(boxes).forEach(element => {
         if (boxtext.innerText === '') {
             if (!gameover) {
                 boxtext.innerText = turn;
-                turn = changeTurn();
                 tapSound.play();
                 checkWinner();
                 document.getElementsByClassName("info")[0].innerText = "Turn for Player " + turn;
             }
+            turn = changeTurn();
         }
     });
 });
