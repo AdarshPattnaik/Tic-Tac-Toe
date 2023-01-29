@@ -82,11 +82,12 @@ nav {
 }
 
 .box {
+    font-family: 'Secular One', sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 4rem;
     background-color: rgba(54, 118, 255, 0.582);
     color: white;
     text-shadow: 0px 0px 5px white;
@@ -199,7 +200,7 @@ footer {
     }
 
     .box{
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     .gameInfo {
